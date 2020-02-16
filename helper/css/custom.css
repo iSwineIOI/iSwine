@@ -1,0 +1,21 @@
+#profileDisplay{
+	display: block;
+	width: 50%;
+	margin: 10px auto;
+	border-radius: 50%;
+}
+#content-desktop{
+	display: block !important;
+}
+#content-phone{
+	display: none !important;
+}
+@media screen and (max-width:768px)
+{
+	#content-desktop{
+		display: none !important;
+	}
+	#content-phone{
+		display: block !important;
+	}
+}

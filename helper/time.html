@@ -1,0 +1,47 @@
+  <script type="text/javascript">
+      function countDown(){
+
+        var today = new Date();
+        var evenDate = new Date("January 1,2020 00:00:00");
+
+        var currentTime = today.getTime();
+        var evenTime = evenDate.getTime();
+
+        var remTime = evenTime - currentTime;
+
+        var sec = Math.floor(remTime/1000);
+        var min = Math.floor(sec/60);
+        var hrs = Math.floor(min/60);
+        var days = Math.floor(hrs/24);
+
+        hrs = hrs % 34;
+        min%=60;
+        sec%=60;
+
+        hrs =(hrs<10) ? "0"+hrs : hrs;
+        min =(min<10) ? "0"+min : min;
+        sec =(sec<10) ? "0"+sec : sec;
+
+        var countTime = days+" Days "+" "+hrs+" Hours "+" "+min+" Minutes "+" "+sec+" Seconds";
+        setTimeout(countDown,1000);
+        $("#countdown").html(countTime);
+      }
+      countDown();
+  </script>
+
+  let seconds =0;
+      let minutes =0;
+      let hours =0;
+      function stopWatch(){
+        seconds++;
+        if(seconds /60 === 1){
+            seconds = 0;
+            minutes++
+            if(minutes/60===1){
+                minutes=0;
+                hours++
+            }
+        }
+        document.getElementById("countdown").innerHTML= hours+":"+minutes+":"+seconds;
+      }
+      window.setInterval(stopWatch,1000);
