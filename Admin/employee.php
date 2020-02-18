@@ -265,7 +265,7 @@ $exe = mysqli_query($mysqli,$vet);
                 <div class="col-sm-12">
               <section class="card">
               <header class="card-header">
-                  SOW TABLE
+                  EMPLOYEE TABLE
               <span class="tools pull-right"> 
                
               </header>
