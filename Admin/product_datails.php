@@ -718,7 +718,7 @@ while($medc = mysqli_fetch_array($askmed))
         data:{'swineid':swineid,'age':age,'swine_type':swine_type,'breed':breed,'breedCount':breedCount,'status':status,'reasonCull':reasonCull,'totalswineprice':totalswineprice,'totalCostOfswine':totalCostOfswine,'startWeight':startWeight,'endWeight':endWeight,'description':description,'Frontimage':Frontimage,'Leftimage':Leftimage,'Rightimage':Rightimage,'Backimage':Backimage},
         success:function(data)
         {
-            //alert(data);
+            
             if(data == "success")
             {
               toastr.success("Product successfully posted","Successful");
@@ -726,6 +726,7 @@ while($medc = mysqli_fetch_array($askmed))
             }
             else
             {
+			  alert(data);
               toastr.error("Failed to post product","Failed");
             }
         }
@@ -810,13 +811,13 @@ while($medc = mysqli_fetch_array($askmed))
         data:{'result':result,'quantity':quantity,'price':price,'Pname':Pname,'swineid':swineid,'today':today},
         success:function(data)
         {
-            //alert(data);
             if(data == "Product Already Added")
             {
               toastr.error("Product Already Added","Failed");
             }
             else
             {
+            alert(data);
               $("#productPrice").html(data);
               $("#quantity").val("");
               $("#price").val("");
