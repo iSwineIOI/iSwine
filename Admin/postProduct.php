@@ -37,7 +37,14 @@ $sql = "INSERT INTO postproduct
 	Frontimage,
 	Leftimage,
 	Rightimage,
-	Backimage
+	Backimage,
+	totalBenefits,
+	sale_status,
+	new_price,
+	cust_id,
+	date_added_cart,
+	purchase_status,
+	date_purchase
 )
 VALUES
 (
@@ -57,7 +64,14 @@ VALUES
 	'$Frontimage',
 	'$Leftimage',
 	'$Rightimage',
-	'$Backimage'
+	'$Backimage',
+	'',
+	'',
+	'',
+	'',
+	'',
+	'',
+	''
 )
 ";
 if(mysqli_query($mysqli,$sql))
