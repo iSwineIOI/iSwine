@@ -1,4 +1,4 @@
 <?php
-$mysqli = new mysqli ('localhost', 'root','', 'iswine');
+$mysqli = new mysqli ('127.0.0.1', 'root','', 'iswine');
 
 ?>
